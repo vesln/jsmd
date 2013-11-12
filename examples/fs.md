@@ -8,8 +8,6 @@ When using the synchronous form any exceptions are immediately thrown. You can u
 
 ## Async
 
-## Source
-
 ```js
 var fs = require('fs');
 
@@ -17,5 +15,6 @@ fs.unlink('/tmp/this-is-stupid', function(err) {
   typeof err; // => 'object'
 });
 ```
+## Source
 
 http://nodejs.org/api/fs.html
