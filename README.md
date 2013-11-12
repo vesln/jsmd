@@ -47,13 +47,7 @@ $ jsmd README.md
 ```
 
 In order jsmd to recognize your JavaScript code elements, you have to specify
-their language:
-
-```
-```js
-// js code goes here
-```
-```
+their language.
 
 ### How it works
 
@@ -66,7 +60,8 @@ jsmd has very simple flow, that looks like this:
   execute it
 * It will report failures if any
 
-For examples check the [examples folder](https://github.com/vesln/jsmd/tree/master/examples).
+See the [examples](https://github.com/vesln/jsmd/tree/master/examples) for more
+info.
 
 ## Installation
 
