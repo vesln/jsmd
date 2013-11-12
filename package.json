@@ -28,6 +28,7 @@
     "temporary": "0.0.7",
     "esprima": "~1.0.4",
     "escodegen": "0.0.28",
-    "estraverse": "~1.4.0"
+    "estraverse": "~1.4.0",
+    "marked": "~0.2.10"
   }
 }

@@ -62,6 +62,7 @@ jsmd.verifyFile(file, { debug: debug }, function(err, path) {
     console.error(err.message);
     console.error('');
     console.error(path);
+    console.error('');
     process.exit(1);
   }
 });
