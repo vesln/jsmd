@@ -1,0 +1,67 @@
+#!/usr/bin/env node
+
+/**
+ * Internal dependencies.
+ */
+
+var jsmd = require('..');
+
+/**
+ * Help message.
+ */
+
+var help = [
+   'Usage: jsmd <path>',
+   '',
+   'Options:',
+   '',
+   '  --debug     do not delete the temporary file after execution',
+   '  --help      display this help message',
+   '  --version   display the version number',
+   '',
+].join('\n');
+
+/**
+ * Args.
+ */
+
+var args = process.argv.slice(2);
+
+/**
+ * Readme file.
+ */
+
+var file = args.filter(function(arg) {
+  return arg.indexOf('--') !== 0;
+})[0];
+
+/**
+ * Debug mode.
+ */
+
+var debug = args.indexOf('--debug') > -1;
+
+// --version
+
+if (args.indexOf('--version') > -1) {
+  console.log(require('../package.json').version);
+  process.exit(0);
+}
+
+// --help
+
+if (!file || args.indexOf('--help') > -1) {
+  console.log(help);
+  process.exit(0);
+}
+
+// Verify and report
+
+jsmd.verifyFile(file, { debug: debug }, function(err, path) {
+  if (err) {
+    console.error(err.message);
+    console.error('');
+    console.error(path);
+    process.exit(1);
+  }
+});
