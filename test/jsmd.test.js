@@ -27,7 +27,7 @@ describe('jsmd', function() {
 
   it('returns an error when the verification was not successful', function(done) {
     run('bad', function(err) {
-      err.code.should.eq(8);
+      (err.code > 0).should.eq(true);
       done();
     });
   });
