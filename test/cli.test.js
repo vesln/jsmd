@@ -29,11 +29,18 @@ describe('cli', function() {
   });
 
   describe('main', function() {
-    it('verifies the given file', function(done) {
+    it('does not output anything when the verification went good', function(done) {
       app()
       .stdout('')
       .code(0)
       .run(fixture('empty'))
+      .end(done);
+    });
+
+    it('exits with 1 when the verification was not ok', function(done) {
+      app()
+      .code(1)
+      .run(fixture('bad'))
       .end(done);
     });
   });

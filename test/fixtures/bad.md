@@ -1,0 +1,3 @@
+```javascript
+true // => false
+```
