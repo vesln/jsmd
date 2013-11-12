@@ -7,12 +7,71 @@
 
 ## Synopsis
 
-## Description
+jsmd ensures that you will never have outdated and non-working code in your
+README files.
+
+## Usage
+
+```
+Usage: jsmd <path>
+
+Options:
+
+  --debug     do not delete the temporary file after execution
+  --help      display this help message
+  --version   display the version number
+```
+
+### How to use it
+
+Just write your README files in GitHub Flavored Markdown as usual. The only thing that you have
+to add is the actual assertions. So here is a small example that will hopefully
+illustrate how assertions look:
+
+```js
+var fs = require('fs');
+
+fs.unlink('/tmp/this-is-stupid', function(err) {
+  typeof err; // => 'object'
+});
+```
+
+In this simple example we expect that the type of `err` is equal to 'object'.
+As simple as that.
+
+In order to verify if everything works properly just supply the desired file to
+jsmd and it will verify it for you:
+
+```
+$ jsmd README.md
+```
+
+In order jsmd to recognize your JavaScript code elements, you have to specify
+their language:
+
+```
+```js
+// js code goes here
+```
+```
+
+### How it works
+
+jsmd has very simple flow, that looks like this:
+
+* First jsmd will parse and extract all JavaScript code elements
+* It will search the code snippets for "assertions". Assertions look like
+  this `Math.min(1, 2) // => 1`
+* It will compile the JavaScript code with the assertions and it will try to
+  execute it
+* It will report failures if any
+
+For examples check the [examples folder](https://github.com/vesln/jsmd/tree/master/examples).
 
 ## Installation
 
 ```bash
-npm install jsmd
+$ npm install jsmd -g
 ```
 
 ## Tests
