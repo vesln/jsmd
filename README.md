@@ -83,6 +83,10 @@ $ npm test
 $ npm run-script coverage
 ```
 
+## Related projects
+
+* [Doctest.js](http://doctestjs.org/)
+
 ## License
 
 (The MIT License)
