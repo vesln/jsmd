@@ -86,6 +86,7 @@ $ npm run-script coverage
 ## Related projects
 
 * [Doctest.js](http://doctestjs.org/)
+* [xplain](https://github.com/bahmutov/xplain) - JavaScript API documentation generator that uses unit tests as examples
 
 ## License
 
