@@ -27,7 +27,7 @@ describe('jsmd', function() {
 
   it('returns an error when the verification was not successful', function(done) {
     run('bad', function(err) {
-      err.should.have.property('message', 'false deepEqual true');
+      should.exist(err);
       done();
     });
   });
