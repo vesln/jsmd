@@ -32,7 +32,7 @@ describe('jsmd', function() {
     });
   });
 
-   it('can require relative files', function(done) {
+   it('can require files', function(done) {
     run('require', function(err) {
       should.not.exist(err);
       done();
