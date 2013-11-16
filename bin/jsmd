@@ -56,18 +56,32 @@ if (args.indexOf('--version') > -1) {
 
 // --help
 
-if (!file || args.indexOf('--help') > -1) {
+if (args.indexOf('--help') > -1) {
   console.log(help);
   process.exit(0);
 }
 
-// make path absolute
+if (file) {
+  // process file
 
-file = resolve(process.cwd(), file);
+  // make path absolute
+  file = resolve(process.cwd(), file);
 
-// Verify and report
+  jsmd.verifyFile(file, end);
+} else {
+  // process stdin
 
-jsmd.verifyFile(file, function(err, js) {
+  var md = '';
+  // give default name
+  file = process.cwd() + '/jsdm.md';
+  process.stdin.setEncoding('utf8');
+  process.stdin.on('data', function(chunk){ md += chunk; });
+  process.stdin.on('end', function(){
+    jsmd.verify(md, file, end);
+  }).resume();
+}
+
+function end(err, js) {
   if (err) {
     console.error(err.message);
     console.error('');
@@ -81,4 +95,4 @@ jsmd.verifyFile(file, function(err, js) {
     console.error(file + ':\n');
     console.log(js);
   }
-});
+}
