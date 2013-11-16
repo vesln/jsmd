@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 
 /**
+ * Core dependencies.
+ */
+
+var resolve = require('path').resolve;
+
+/**
  * Internal dependencies.
  */
 
@@ -55,18 +61,24 @@ if (!file || args.indexOf('--help') > -1) {
   process.exit(0);
 }
 
+// make path absolute
+
+file = resolve(process.cwd(), file);
+
 // Verify and report
 
-jsmd.verifyFile(file, { debug: debug }, function(err, path) {
+jsmd.verifyFile(file, function(err, js) {
   if (err) {
     console.error(err.message);
     console.error('');
-    console.error(path);
+    console.error(file + ':\n');
+    console.error(js);
     console.error('');
     process.exit(1);
   }
 
   if (debug) {
-    console.log(path);
+    console.error(file + ':\n');
+    console.log(js);
   }
 });

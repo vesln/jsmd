@@ -19,7 +19,7 @@
     "jsmd": "./bin/jsmd"
   },
   "devDependencies": {
-    "mocha": "~1.13.0",
+    "mocha": "~1.14.0",
     "chai": "~1.8.1",
     "jshint": "~2.3.0",
     "coveralls": "~2.3.0",
@@ -29,7 +29,6 @@
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT",
   "dependencies": {
-    "temporary": "0.0.7",
     "esprima": "~1.0.4",
     "escodegen": "0.0.28",
     "estraverse": "~1.4.0",
