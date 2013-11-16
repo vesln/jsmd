@@ -83,6 +83,12 @@ $ npm test
 $ npm run-script coverage
 ```
 
+## Credits
+
+Special thanks to:
+
+* [Jake Rosoman](https://github.com/jkroso)
+
 ## Related projects
 
 * [Doctest.js](http://doctestjs.org/)
