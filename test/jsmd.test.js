@@ -32,8 +32,15 @@ describe('jsmd', function() {
     });
   });
 
-   it('can require relative files', function(done) {
+  it('can require relative files', function(done) {
     run('require', function(err) {
+      should.not.exist(err);
+      done();
+    });
+  });
+
+  it('can handle multi-line expressions', function(done) {
+    run('multi-line', function(err) {
       should.not.exist(err);
       done();
     });

@@ -1,4 +1,4 @@
 ```js
-require('../../package.json')
-false // => false
+require('../../package.json');
+false // => false;
 ```
