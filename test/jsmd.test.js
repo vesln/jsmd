@@ -1,6 +1,6 @@
 var verifyFile = require('..').verifyFile;
 var run = function run(file, fn) {
-  verifyFile(fixture(file), {}, fn);
+  verifyFile(fixture(file), fn);
 };
 
 describe('jsmd', function() {
@@ -27,7 +27,14 @@ describe('jsmd', function() {
 
   it('returns an error when the verification was not successful', function(done) {
     run('bad', function(err) {
-      (err.code > 0).should.eq(true);
+      should.exist(err);
+      done();
+    });
+  });
+
+   it('can require relative files', function(done) {
+    run('require', function(err) {
+      should.not.exist(err);
       done();
     });
   });
