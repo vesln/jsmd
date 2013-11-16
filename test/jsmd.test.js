@@ -1,6 +1,12 @@
+var Rewriter = require('../lib/jsmd/rewriter');
 var verifyFile = require('..').verifyFile;
 var run = function run(file, fn) {
   verifyFile(fixture(file), fn);
+};
+var compile = function(file, fn){
+  var path = fixture(file);
+  var md = require('fs').readFileSync(path, 'utf8');
+  new Rewriter(md).compile(fn);
 };
 
 describe('jsmd', function() {
@@ -42,6 +48,14 @@ describe('jsmd', function() {
   it('can handle multi-line expressions', function(done) {
     run('multi-line', function(err) {
       should.not.exist(err);
+      done();
+    });
+  });
+
+  it.skip('supports automatic semicolon insertion (ASI)', function(done) {
+    compile('ASI', function(js) {
+      js.should.match(/__jsmd__\(1,/);
+      js.should.match(/__jsmd__\(2,/);
       done();
     });
   });
