@@ -1,4 +1,12 @@
 
+0.1.0 / 2013-11-19
+==================
+
+  * Handle basic ASI
+  * Support piping the file to stdin in the CLI
+  * Support multi-line expressions
+  * Run code within a normal module context
+
 0.0.1 / 2013-11-12
 ==================
 
