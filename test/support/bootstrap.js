@@ -3,6 +3,7 @@
  */
 
 var join = require('path').join;
+var fs = require('fs');
 
 /**
  * External dependencies.

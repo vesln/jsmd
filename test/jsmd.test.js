@@ -3,11 +3,6 @@ var verifyFile = require('..').verifyFile;
 var run = function run(file, fn) {
   verifyFile(fixture(file), fn);
 };
-var compile = function(file, fn){
-  var path = fixture(file);
-  var md = require('fs').readFileSync(path, 'utf8');
-  new Rewriter(md).compile(fn);
-};
 
 describe('jsmd', function() {
   it('ignores code different than javascript', function(done) {
@@ -41,21 +36,6 @@ describe('jsmd', function() {
   it('can require relative files', function(done) {
     run('require', function(err) {
       should.not.exist(err);
-      done();
-    });
-  });
-
-  it('can handle multi-line expressions', function(done) {
-    run('multi-line', function(err) {
-      should.not.exist(err);
-      done();
-    });
-  });
-
-  it.skip('supports automatic semicolon insertion (ASI)', function(done) {
-    compile('ASI', function(js) {
-      js.should.match(/__jsmd__\(1,/);
-      js.should.match(/__jsmd__\(2,/);
       done();
     });
   });
