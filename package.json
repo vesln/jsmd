@@ -6,8 +6,8 @@
   "main": "./lib/jsmd.js",
   "homepage": "https://github.com/vesln/jsmd",
   "scripts": {
-    "test": "./node_modules/.bin/mocha test/*.test.js",
-    "pretest": "./node_modules/.bin/jshint .",
+    "test": "mocha test/*.test.js",
+    "pretest": "jshint .",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha test/*.test.js",
     "coveralls": "istanbul cover ./node_modules/.bin/_mocha test/*.test.js --report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
