@@ -7,6 +7,4 @@ server.port = 1234;
 Math.min(1, 2) // => 1
 ```
 
-<!-- js
-server = null;
--->
+<!--js server = null; -->
