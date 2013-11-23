@@ -52,6 +52,21 @@ them either as "js" or "javascript".
 See the [examples](https://github.com/vesln/jsmd/tree/master/examples) for more
 info.
 
+#### Hidden setup
+
+Sometimes you don't want to put helper code into your readme file, but it's
+necessary in order to perform the tests. In this case, you can simply add
+special html comments which jsmd will extract and put inside the compiled file.
+
+```
+<!-- js
+var server = require('express');
+server();
+-->
+```
+
+That way, GitHub won't visualize the comment but jsmd will be able to parse it.
+
 ### How it works
 
 jsmd has very simple flow, that looks like this:
