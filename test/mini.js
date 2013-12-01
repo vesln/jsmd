@@ -9,6 +9,7 @@ var join = require('path').join;
  */
 
 var chai = require('chai');
+var mini = require('mini');
 
 /**
  * Register `should`.
@@ -30,5 +31,11 @@ chai.Assertion.includeStack = true;
  */
 
 global.fixture = function(extra) {
-  return join(__dirname, '..', 'fixtures', extra + '.md');
+  return join(__dirname, 'fixtures', extra + '.md');
 };
+
+/**
+ * Export `mini`.
+ */
+
+global.test = mini;
