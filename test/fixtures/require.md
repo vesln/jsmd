@@ -1,6 +1,6 @@
 ```js
 require('../../package.json');
-require('mini');
+require('chai');
 false; // => false
 false // => false;
 ```
