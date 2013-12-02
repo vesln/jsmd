@@ -31,7 +31,7 @@ chai.Assertion.includeStack = true;
  */
 
 global.fixture = function(extra) {
-  return join(__dirname, 'fixtures', extra + '.md');
+  return join(__dirname, 'test', 'fixtures', extra + '.md');
 };
 
 /**
