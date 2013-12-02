@@ -9,7 +9,7 @@ var join = require('path').join;
  */
 
 var chai = require('chai');
-var mini = require('mini');
+var hydro = require('hydro');
 
 /**
  * Register `should`.
@@ -35,7 +35,7 @@ global.fixture = function(extra) {
 };
 
 /**
- * Export `mini`.
+ * Export `hydro`.
  */
 
-global.test = mini;
+global.test = hydro;

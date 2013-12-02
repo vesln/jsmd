@@ -6,10 +6,10 @@
   "main": "./lib/jsmd.js",
   "homepage": "https://github.com/vesln/jsmd",
   "scripts": {
-    "test": "mini",
+    "test": "hydro",
     "pretest": "jshint .",
-    "coverage": "istanbul cover ./node_modules/.bin/mini -- --formatter noop",
-    "coveralls": "istanbul cover ./node_modules/.bin/mini --report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coverage": "istanbul cover ./node_modules/.bin/hydro -- --formatter noop",
+    "coveralls": "istanbul cover ./node_modules/.bin/hydro --report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "coveralls": "~2.3.0",
     "istanbul": "~0.1.44",
     "nixt": "0.0.4",
-    "mini": "~0.1.2"
+    "hydro": "latest"
   },
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT",
