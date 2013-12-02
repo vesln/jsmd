@@ -8,7 +8,7 @@
   "scripts": {
     "test": "hydro",
     "pretest": "jshint .",
-    "coverage": "istanbul cover ./node_modules/.bin/hydro -- --formatter noop",
+    "coverage": "istanbul cover ./node_modules/.bin/hydro -- --formatter hydro-silent",
     "coveralls": "istanbul cover ./node_modules/.bin/hydro --report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
