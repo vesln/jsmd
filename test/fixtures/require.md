@@ -1,6 +1,6 @@
 ```js
 require('../../package.json');
-require('mocha');
+require('chai');
 false; // => false
 false // => false;
 ```
