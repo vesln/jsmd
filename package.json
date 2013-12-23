@@ -23,9 +23,11 @@
     "jshint": "~2.3.0",
     "coveralls": "~2.3.0",
     "istanbul": "~0.1.44",
-    "nixt": "0.0.4",
-    "hydro": "latest",
-    "hydro-silent": "~1.0.1"
+    "nixt": "*",
+    "hydro": "*",
+    "hydro-silent": "*",
+    "hydro-dot": "*",
+    "hydro-chai": "*"
   },
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT",
