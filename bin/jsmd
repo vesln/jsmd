@@ -83,16 +83,25 @@ if (file) {
 
 function end(err, js) {
   if (err) {
-    console.error(err.message);
+    console.error(err.stack);
     console.error('');
     console.error(file + ':\n');
-    console.error(js);
+    console.error(number(js));
     console.error('');
     process.exit(1);
   }
 
   if (debug) {
     console.error(file + ':\n');
-    console.log(js);
+    console.log(number(js));
   }
+}
+
+function number(src){
+  var i = 1;
+  return src.replace(/^/gm, function(){
+    var n = ' ' + String(i++);
+    while (n.length < 4) n += ' ';
+    return '\033[90m' + n + '| \033[0m';
+  });
 }
