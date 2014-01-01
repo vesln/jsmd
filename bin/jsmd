@@ -73,7 +73,7 @@ if (file) {
 
   var md = '';
   // give default name
-  file = process.cwd() + '/jsdm.md';
+  file = process.cwd() + '/stdin';
   process.stdin.setEncoding('utf8');
   process.stdin.on('data', function(chunk){ md += chunk; });
   process.stdin.on('end', function(){
