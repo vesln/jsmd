@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+if (require('v8-argv')) return;
+
 /**
  * Core dependencies.
  */
@@ -21,7 +23,7 @@ var help = [
    '',
    'Options:',
    '',
-   '  --debug     do not delete the temporary file after execution',
+   '  --show      display the compiled JS after execution',
    '  --help      display this help message',
    '  --version   display the version number',
    '',
@@ -45,7 +47,7 @@ var file = args.filter(function(arg) {
  * Debug mode.
  */
 
-var debug = args.indexOf('--debug') > -1;
+var show = args.indexOf('--show') > -1;
 
 // --version
 
@@ -91,7 +93,7 @@ function end(err, js) {
     process.exit(1);
   }
 
-  if (debug) {
+  if (show) {
     console.error(file + ':\n');
     console.log(number(js));
   }
