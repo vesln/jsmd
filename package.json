@@ -11,23 +11,20 @@
     "coverage": "istanbul cover ./node_modules/hydro/bin/_hydro -- --formatter hydro-silent",
     "coveralls": "istanbul cover ./node_modules/hydro/bin/_hydro --report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vesln/jsmd"
-  },
+  "repository": "https://github.com/vesln/jsmd",
   "bin": {
     "jsmd": "./bin/jsmd"
   },
   "devDependencies": {
-    "chai": "~1.8.1",
-    "jshint": "~2.3.0",
     "coveralls": "~2.3.0",
     "istanbul": "~0.1.44",
-    "nixt": "*",
-    "hydro": "*",
     "hydro-silent": "*",
+    "jshint": "~2.3.0",
+    "hydro-chai": "*",
     "hydro-dot": "*",
-    "hydro-chai": "*"
+    "chai": "^1.9.1",
+    "hydro": "*",
+    "nixt": "*"
   },
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT",
