@@ -17,7 +17,7 @@ Usage: jsmd <path>
 
 Options:
 
-  --debug     do not delete the temporary file after execution
+  --show      display the compiled JS after execution
   --help      display this help message
   --version   display the version number
 ```
