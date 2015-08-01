@@ -30,6 +30,9 @@
     "nixt": "*"
   },
   "author": "Veselin Todorov <hi@vesln.com>",
+  "contributors": [
+    "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)"
+  ],
   "license": "MIT",
   "dependencies": {
     "v8-argv": "jkroso/v8-argv#1.0.1",
