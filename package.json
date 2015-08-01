@@ -33,6 +33,6 @@
     "estraverse": "^1.5.0",
     "escodegen": "^1.3.2",
     "marked": "^0.3.2",
-    "esprima-fb": "*"
+    "esprima": "^2.4.1"
   }
 }
