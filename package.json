@@ -35,10 +35,10 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "escodegen": "1",
-    "esprima": "2",
-    "estraverse": "4",
-    "marked": "0.3.9",
+    "escodegen": "^1.9.1",
+    "esprima": "^2.7.3",
+    "estraverse": "^4.2.0",
+    "marked": "~0.3.9",
     "v8-argv": "jkroso/v8-argv#1.1.1"
   }
 }
