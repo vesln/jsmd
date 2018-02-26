@@ -26,3 +26,7 @@ test('returns an error when the verification was not successful', function(done)
 test('can require relative files', function(done) {
   run('require', done);
 });
+
+test('Works with ES6 code', function(done) {
+	run('es6', done);
+});
