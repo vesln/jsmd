@@ -19,14 +19,14 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
+    "chai": "^1.9.1",
     "coveralls": "~2.3.0",
-    "istanbul": "~0.1.44",
-    "hydro-silent": "*",
-    "jshint": "~2.3.0",
+    "hydro": "*",
     "hydro-chai": "*",
     "hydro-dot": "*",
-    "chai": "^1.9.1",
-    "hydro": "*",
+    "hydro-silent": "*",
+    "istanbul": "~0.1.44",
+    "jshint": "2.10.2",
     "nixt": "*"
   },
   "author": "Veselin Todorov <hi@vesln.com>",
@@ -38,7 +38,7 @@
     "escodegen": "^1.9.1",
     "esprima": "^2.7.3",
     "estraverse": "^4.2.0",
-    "marked": "~0.3.9",
+    "marked": "0.6.2",
     "v8-argv": "jkroso/v8-argv#1.1.1"
   }
 }
