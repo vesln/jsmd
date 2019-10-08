@@ -1,7 +1,7 @@
 {
   "name": "jsmd",
   "preferGlobal": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "jsmd ensures that you will never have outdated and non-working JavaScript code in your README files.",
   "main": "./lib/jsmd.js",
   "homepage": "https://github.com/vesln/jsmd",
