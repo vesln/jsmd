@@ -38,7 +38,7 @@
     "escodegen": "^1.9.1",
     "esprima": "^2.7.3",
     "estraverse": "^4.2.0",
-    "marked": "0.6.2",
+    "marked": "^0.7.0",
     "v8-argv": "jkroso/v8-argv#1.1.1"
   }
 }
