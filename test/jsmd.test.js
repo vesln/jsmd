@@ -30,3 +30,7 @@ test('can require relative files', function(done) {
 test('Works with ES6 code', function(done) {
 	run('es6', done);
 });
+
+test('ignores node blocks', function(done) {
+  run('gfm-node-block', done);
+});

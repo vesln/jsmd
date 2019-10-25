@@ -46,11 +46,20 @@ jsmd and it will verify it for you:
 $ jsmd README.md
 ```
 
+See the [examples](https://github.com/vesln/jsmd/tree/master/examples) for more
+info.
+
+#### Which code blocks get evaluated
+
 In order jsmd to recognize your JavaScript code elements, you have to specify
 them either as "js" or "javascript".
 
-See the [examples](https://github.com/vesln/jsmd/tree/master/examples) for more
-info.
+To get JavaScript syntax highlighting, without jsmd running the code, specify the code block as "node".
+
+	```node
+	var rm_rf = require('rimraf')
+	rm_rf('/usr/bin')
+	```
 
 #### Hidden setup
 
