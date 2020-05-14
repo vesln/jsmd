@@ -31,6 +31,10 @@ test('Works with ES6 code', function(done) {
 	run('es6', done);
 });
 
+test('Works with ES2018 code', function(done) {
+	run('es2018', done);
+});
+
 test('ignores node blocks', function(done) {
   run('gfm-node-block', done);
 });
