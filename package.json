@@ -6,7 +6,7 @@
   "main": "./lib/jsmd.js",
   "homepage": "https://github.com/vesln/jsmd",
   "scripts": {
-    "test": "hydro",
+    "test": "_hydro",
     "pretest": "jshint .",
     "coverage": "istanbul cover ./node_modules/hydro/bin/_hydro -- --formatter hydro-silent",
     "coveralls": "istanbul cover ./node_modules/hydro/bin/_hydro --report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
