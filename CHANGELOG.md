@@ -1,3 +1,16 @@
+# 1.1.0 / 2021-12-10
+
+- Fix cases where commas could cause multiple assertions per line #31
+- Tests should work on Windows now #30
+
+# 1.0.2 / 2019-10-08
+
+- Bump `marked` dependency version
+
+# 1.0.1 / 2019-05-16
+
+- Bump `marked` dependency version
+
 # 1.0.0 / 2018-02-26
 
 - Bump dependencies
