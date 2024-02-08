@@ -38,3 +38,11 @@ test('Works with ES2018 code', function(done) {
 test('ignores node blocks', function(done) {
   run('gfm-node-block', done);
 });
+
+test('empty files are ok', function(done) {
+  run('empty', done);
+});
+
+test('handles iife', function(done) {
+  run('iife', done);
+});

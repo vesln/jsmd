@@ -1,7 +1,5 @@
 [![NPM version](https://badge.fury.io/js/jsmd.png)](http://badge.fury.io/js/jsmd)
-[![Build Status](https://secure.travis-ci.org/vesln/jsmd.png)](http://travis-ci.org/vesln/jsmd)
-[![Coverage Status](https://coveralls.io/repos/vesln/jsmd/badge.png?branch=master)](https://coveralls.io/r/vesln/jsmd?branch=master)
-[![Code Climate](https://codeclimate.com/github/vesln/jsmd.png)](https://codeclimate.com/github/vesln/jsmd)
+[![Build Status](https://circleci.com/gh/vesln/jsmd.svg?style=shield)](https://circleci.com/gh/vesln/jsmd)
 
 # jsmd
 
