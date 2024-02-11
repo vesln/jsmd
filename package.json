@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "chai": "^1.9.1",
-    "coveralls": "~2.3.0",
+    "coveralls": "~2.13.3",
     "hydro": "*",
     "hydro-chai": "*",
     "hydro-dot": "*",
